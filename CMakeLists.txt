@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (ascii)
+include_directories(${PROJECT_SOURCE_DIR})
+add_library (ascii ascii.c)
+add_executable(ascii_demo demo.c)
+target_link_libraries(ascii_demo ascii)
