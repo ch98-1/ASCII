@@ -11,7 +11,7 @@ int main(int argc, char *argv[]){
 	memset(data, 'x', W*24);
 	int i = 0;
 	setvbuf(stdin, NULL, _IONBF, 0);
-	system ("/bin/stty raw");
+	raw_stdin();
 	while(1){
 		data[i * W + i] = 'O';
 		display_rn(data, W, 24, W, 24, 0, 0);//display
@@ -19,6 +19,6 @@ int main(int argc, char *argv[]){
 		i++;
 		if(i >= 24) break;
 	}
-	system ("/bin/stty cooked");
+	cooked_stdin();
 }
 
