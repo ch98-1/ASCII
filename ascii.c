@@ -147,7 +147,7 @@ void cooked_stdin(void){//get normal input from terminal
 	#if defined POSIX
 	system ("/bin/stty cooked echo");
 	#elif defined WINDOWS
-	SetConsoleMode(GetStdHandle(STD_INPUT_HANDLE),(ENABLE_ECHO_INPUT | ENABLE_EXTENDED_FLAGS | ENABLE_INSERT_MODE | ENABLE_LINE_INPUT | ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_QUICK_EDIT_MODE | ENABLE_WINDOW_INPUT);//do windows stuff. It's windows. It's not supposed to make sense
+	SetConsoleMode(GetStdHandle(STD_INPUT_HANDLE),(ENABLE_ECHO_INPUT | ENABLE_EXTENDED_FLAGS | ENABLE_INSERT_MODE | ENABLE_LINE_INPUT | ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_QUICK_EDIT_MODE | ENABLE_WINDOW_INPUT));//do windows stuff. It's windows. It's not supposed to make sense
 	#endif
 
 }

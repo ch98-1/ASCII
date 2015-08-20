@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
 	raw_stdin();
 	while(1){
 		data[i * W + i] = 'O';
-		display_rn(data, W, 24, W, 24, 0, 0);//display
+		display(data, W, 24, W, 24, 0, 0);//display
 		getchar();
 		i++;
 		if(i >= 24) break;
